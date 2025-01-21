@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        level = NameLevel.level;
         Time.timeScale = 1.0f;
         audioSource = GetComponent<AudioSource>();
         stagelevel();
@@ -76,6 +77,7 @@ public class GameManager : MonoBehaviour
             {
                 endTxt.gameObject.SetActive(true);
                 Time.timeScale = 0.0f;
+                
             }
         }
         else

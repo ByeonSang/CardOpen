@@ -19,15 +19,15 @@ public class NameLevel : MonoBehaviour
     }
     
     public static Dictionary<int, string> names = new Dictionary<int, string>();
-    public static int level = 0;
+    public static int level = 1;
     
     void Start()
     {
-        names.Add(0, "name_BSY");
-        names.Add(1, "name_CJH");
-        names.Add(2, "name_JHG");
-        names.Add(3, "name_LJG");
-        names.Add(4, "name_PSH");
+        names.Add(1, "name_BSY");
+        names.Add(2, "name_CJH");
+        names.Add(3, "name_JHG");
+        names.Add(4, "name_LJG");
+        names.Add(5, "name_PSH");
     }
     
 }
