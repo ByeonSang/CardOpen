@@ -21,13 +21,11 @@ public class Satge1 : MonoBehaviour
     }
     private void Update()
     {
-        if (gameObject.name == "Stage2" && stage2) 
+        if (NameLevel.clears[NameLevel.selectedLevel]) 
         {
             ActivateBtn();
-        } else if(gameObject.name == "Stage3" && stage3)
-        {
-            ActivateBtn();
-        }
+        } 
+
     }
     private void ActivateBtn()
     {

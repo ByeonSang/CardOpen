@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -31,6 +32,8 @@ public class GameManager : MonoBehaviour
     [Header("Time")]
     public float leveltime = 30f;
     public float returntime = 1;
+
+
 
     private void Awake()
     {
@@ -73,11 +76,16 @@ public class GameManager : MonoBehaviour
             firstCard.DestroyCard();
             secondCard.DestroyCard();
             cardCount -= 2;
-            if (cardCount == 0)
+            if (cardCount == 0) // 스테이지 성공 시
             {
                 endTxt.gameObject.SetActive(true);
                 Time.timeScale = 0.0f;
                 
+                if (NameLevel.clears[NameLevel.selectedLevel])
+                {
+                    NameLevel.clears[NameLevel.selectedLevel] = true;
+                    NameLevel.maxLevel++;
+                }
             }
         }
         else

@@ -19,6 +19,7 @@ public class NameLevel : MonoBehaviour
     }
     
     public static Dictionary<int, string> names = new Dictionary<int, string>();
+    public static Dictionary<int, bool> clears = new Dictionary<int, bool>();
     public static int selectedLevel = 1;
     public static int maxLevel = 1;
     
