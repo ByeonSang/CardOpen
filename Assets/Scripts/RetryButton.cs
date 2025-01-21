@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class RetryButton : MonoBehaviour
 {
+
+    public Animator anim;
     public void Retry()
     {
         SceneManager.LoadScene("MainScene");
     }
+
+
 }
