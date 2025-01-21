@@ -16,7 +16,7 @@ public class TextLoad : MonoBehaviour
     void Start()
     {
         DataManager s = DataManager.instance;
-        s.LoadData(NameLevel.level - 1); //GameManager.instance.GetLevel();
+        s.LoadData(NameLevel.selectedLevel - 1); //GameManager.instance.GetLevel();
         try
         {
             Text goText = GetComponent<Text>();

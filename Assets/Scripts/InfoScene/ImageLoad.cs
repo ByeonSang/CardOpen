@@ -8,7 +8,7 @@ public class ImageLoad : MonoBehaviour
     void Start()
     {
 
-        DataManager.instance.LoadData(NameLevel.level - 1);
+        DataManager.instance.LoadData(NameLevel.selectedLevel - 1);
 		try
 		{
             Image image = GetComponent<Image>();

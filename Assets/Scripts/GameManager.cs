@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        level = NameLevel.level;
+        level = NameLevel.selectedLevel;
         Time.timeScale = 1.0f;
         audioSource = GetComponent<AudioSource>();
         stagelevel();

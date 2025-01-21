@@ -31,7 +31,7 @@ public class Card : MonoBehaviour
     {
         idx = number;
         //frontImage.sprite = Resources.Load<Sprite>($"rtan{idx}");
-        frontImage.sprite = Resources.Load<Sprite>($"Image/{NameLevel.names[NameLevel.level]}/{idx}");
+        frontImage.sprite = Resources.Load<Sprite>($"Image/{NameLevel.names[NameLevel.selectedLevel]}/{idx}");
     }
 
     public void OpenCard()

@@ -15,7 +15,7 @@ public class RetryButton : MonoBehaviour
 
     public void levelPlus()
     {   // 테스트용 버튼 레벨 +  합치고 나서 stage Scene오면 삭제후 SetLevel로 기능 테스트
-        NameLevel.level++;
+        NameLevel.maxLevel++;
     }
 
     public void MoveScene(int idx)
@@ -25,6 +25,6 @@ public class RetryButton : MonoBehaviour
 
     public void SetLevel(int level)
     {
-        NameLevel.level = level;
+        NameLevel.selectedLevel = level;
     }
 }

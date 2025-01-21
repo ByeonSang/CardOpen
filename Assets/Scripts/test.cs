@@ -12,6 +12,6 @@ public class test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = NameLevel.level.ToString();
+        text.text = NameLevel.maxLevel.ToString();
     }
 }
