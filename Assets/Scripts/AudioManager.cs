@@ -7,8 +7,9 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     
-    AudioSource audioSource;
+    public AudioSource audioSource { get;set; }
     public AudioClip clip;
+    public AudioClip btnClickClip;
 
     private void Awake()
     {
@@ -16,6 +17,7 @@ public class AudioManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            audioSource = GetComponent<AudioSource>();
         }
         else
         {
@@ -26,9 +28,8 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        
         audioSource.clip = this.clip;
+        audioSource.loop = true;
         audioSource.Play();
     }
 }

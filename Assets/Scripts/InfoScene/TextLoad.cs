@@ -25,7 +25,7 @@ public class TextLoad : MonoBehaviour
             {
                 case StringType.ProfileString:
                     
-                    str = $"이름: {s.pfName}\n나이: {s.pfAge}\n취미: {s.pfLike}\nMBTI: {s.pfMbti}\n좋아하는 게임\n> {s.pfGame}";
+                    str = $"이름: {s.pfName}\n나이: {s.pfAge}\n취미: {s.pfLike}\nMBTI: {s.pfMbti}\n좋아하는 게임\n>{s.pfGame}";
                     break;
                 case StringType.introString:
                     str = s.pfIntroduction;

@@ -21,6 +21,7 @@ public class RetryButton : MonoBehaviour
     public void MoveScene(int idx)
     {
         SceneManager.LoadScene(idx);
+        AudioManager.instance.audioSource.PlayOneShot(AudioManager.instance.btnClickClip);
     }
 
     public void SetLevel(int level)
