@@ -8,7 +8,7 @@ public class ImageLoad : MonoBehaviour
     void Start()
     {
 
-        DataManager.instance.LoadData(0); //GameManager.instance.GetLevel();
+        DataManager.instance.LoadData(NameLevel.level - 1);
 		try
 		{
             Image image = GetComponent<Image>();
