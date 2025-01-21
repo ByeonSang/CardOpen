@@ -6,30 +6,37 @@ using UnityEngine.UI;
 
 public class Satge1 : MonoBehaviour
 {
-    public bool stage2 = false; //임시 bool, stage1 클리어시 true로
-    public bool stage3 = false;
-    private Button btn2;
+    private Button btn;
     public GameObject lock_;
+    public int stage = 1;
     private void Start()
     {
-        btn2 = GetComponent<Button>();
+        btn = GetComponent<Button>();
+        updateButton();
     }
     public void Stage1()
     {
+        NameLevel.selectedLevel = stage;
         SceneManager.LoadScene("MainScene");
             
     }
     private void Update()
     {
-        if (NameLevel.clears[NameLevel.selectedLevel]) 
-        {
-            ActivateBtn();
-        } 
+        updateButton();
 
     }
-    private void ActivateBtn()
+    private void updateButton()
     {
-        btn2.interactable = true;
-        lock_.gameObject.SetActive(false);
+        if(NameLevel.maxLevel >= stage)
+        {
+            btn.interactable = true;
+            lock_.SetActive(false);
+        }
+        else
+        {
+            btn.interactable = false;
+            lock_.SetActive(true);
+        }
     }
+
 }

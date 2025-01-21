@@ -26,10 +26,10 @@ public class NameLevel : MonoBehaviour
     
     void Start()
     {
-        names.Add(1, "name_BSY");
-        names.Add(2, "name_CJH");
-        names.Add(3, "name_JHG");
-        names.Add(4, "name_LJG");
+        names.Add(1, "name_LJG");
+        names.Add(2, "name_BSY");
+        names.Add(3, "name_CJH");
+        names.Add(4, "name_JHG");
         names.Add(5, "name_PSH");
 
         for(int i = 0; i < names.Count; i++)

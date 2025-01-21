@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1.0f;
         audioSource = GetComponent<AudioSource>();
         stagelevel();
+        Debug.Log(NameLevel.selectedLevel);
     }
 
     // Update is called once per frame
@@ -81,7 +82,7 @@ public class GameManager : MonoBehaviour
                 endTxt.gameObject.SetActive(true);
                 Time.timeScale = 0.0f;
                 
-                if (NameLevel.clears[NameLevel.selectedLevel])
+                if (!NameLevel.clears[NameLevel.selectedLevel])
                 {
                     NameLevel.clears[NameLevel.selectedLevel] = true;
                     NameLevel.maxLevel++;
