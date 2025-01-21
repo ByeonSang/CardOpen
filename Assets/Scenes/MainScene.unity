@@ -837,6 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8047684b648b574c949e55bdc1df946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!114 &931218507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,12 +884,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 931218506}
         m_TargetAssemblyTypeName: RetryButton, Assembly-CSharp
-        m_MethodName: toInfoScene
-        m_Mode: 1
+        m_MethodName: MoveScene
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -944,6 +945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8047684b648b574c949e55bdc1df946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!114 &1081641619
 MonoBehaviour:
   m_ObjectHideFlags: 0

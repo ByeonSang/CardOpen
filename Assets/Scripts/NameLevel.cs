@@ -20,6 +20,7 @@ public class NameLevel : MonoBehaviour
     
     public static Dictionary<int, string> names = new Dictionary<int, string>();
     public static Dictionary<int, bool> clears = new Dictionary<int, bool>();
+
     public static int selectedLevel = 1;
     public static int maxLevel = 1;
     
@@ -30,6 +31,9 @@ public class NameLevel : MonoBehaviour
         names.Add(3, "name_JHG");
         names.Add(4, "name_LJG");
         names.Add(5, "name_PSH");
+
+        for(int i = 0; i < names.Count; i++)
+            clears[i] = false;
     }
     
 }
