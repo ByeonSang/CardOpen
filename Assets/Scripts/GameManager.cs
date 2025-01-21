@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
                 if (!NameLevel.clears[NameLevel.selectedLevel])
                 {
                     NameLevel.clears[NameLevel.selectedLevel] = true;
-                    NameLevel.maxLevel++;
+                    if (NameLevel.maxLevel < NameLevel.clears.Count) NameLevel.maxLevel++;
                 }
             }
         }
