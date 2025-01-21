@@ -6,18 +6,31 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    
+    [Header("Card")]
     public Card firstCard;
     public Card secondCard;
-    
+
+    [Header("Text")]
     public Text timeTxt;
+    public Text failcountTxt;
+    public Text levelTxt;
+
+    [Header("Txt Obj")]
     public GameObject endTxt;
-    
+    public GameObject failTxt;
+
+    [Header("Audio")]
     AudioSource audioSource;
     public AudioClip clip;
-    
+
+    [Header("Counter")]
     public int cardCount = 0;
-    float time = 0.0f;
+    public int failcount = 10;
+    public int level = 0;
+    
+    [Header("Time")]
+    public float leveltime = 30f;
+    public float returntime = 1;
 
     private void Awake()
     {
@@ -30,17 +43,23 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         audioSource = GetComponent<AudioSource>();
+        stagelevel();
     }
 
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        timeTxt.text = time.ToString("0.00");
+        leveltime -= Time.deltaTime;
+        timeTxt.text = leveltime.ToString("0.00");
 
-        if (time > 30.0f)
+        if (failcount > 1000) failcountTxt.enabled = false;
+        else failcountTxt.text = failcount.ToString("0");
+
+        levelTxt.text = level.ToString($"LEVEL\n" + level);
+
+        if (leveltime <= 0f || failcount <= 0)
         {
-            endTxt.SetActive(true);
+            failTxt.SetActive(true);
             Time.timeScale = 0.0f;
         }
     }
@@ -63,8 +82,44 @@ public class GameManager : MonoBehaviour
         {
             firstCard.CloseCard();
             secondCard.CloseCard();
+            failcount -= 1;
         }
         firstCard = null;
         secondCard = null;
+    }
+
+    void stagelevel()
+    {
+        if (level == 1)
+        {
+            leveltime = 60;
+            returntime = 1f;
+            failcount = 9999;
+        }
+        else if (level == 2)
+        {
+            leveltime = 50;
+            returntime = 1f;
+            failcount = 9999;
+        }
+        else if (level == 3)
+        {
+            leveltime = 50;
+            returntime = 0.5f;
+            failcount = 30;
+        }
+        else if (level == 4)
+        {
+            leveltime = 40;
+            returntime = 0.5f;
+            failcount = 30;
+        }
+        else if (level == 5)
+        {
+            leveltime = 30;
+            returntime = 0.2f;
+            failcount = 10;
+
+        }
     }
 }

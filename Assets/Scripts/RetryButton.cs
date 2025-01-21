@@ -10,8 +10,15 @@ public class RetryButton : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
+
     public void levelPlus()
     {
         NameLevel.level++;
+    }
+
+    public void toInfoScene()
+    {
+        SceneManager.LoadScene("InfoScene");
+
     }
 }
