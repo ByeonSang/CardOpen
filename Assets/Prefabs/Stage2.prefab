@@ -222,6 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stage2: 1
+  stage3: 0
   lock_: {fileID: 8934751003686241999}
 --- !u!1 &7920450068595175307
 GameObject:
@@ -258,7 +259,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 106.12459, y: -39.372437}
-  m_SizeDelta: {x: 59.5, y: 59.5}
+  m_SizeDelta: {x: 50.5318, y: 59.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6690586310234880490
 CanvasRenderer:
