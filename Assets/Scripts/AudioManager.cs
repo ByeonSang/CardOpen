@@ -6,8 +6,9 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-    
-    public AudioSource audioSource { get;set; }
+
+    public AudioSource audioSource;
+    public AudioSource ClickSource;
     public AudioClip clip;
     public AudioClip btnClickClip;
 
@@ -17,7 +18,8 @@ public class AudioManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            audioSource = GetComponent<AudioSource>();
+            audioSource = gameObject.AddComponent<AudioSource>(); //bgm audioSource
+            ClickSource = gameObject.AddComponent<AudioSource>(); //click audioSource
         }
         else
         {
@@ -28,8 +30,9 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource.clip = this.clip;
+        audioSource.clip = clip;
         audioSource.loop = true;
         audioSource.Play();
+        ClickSource.clip = btnClickClip;
     }
 }

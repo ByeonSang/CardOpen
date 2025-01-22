@@ -5,15 +5,21 @@ using UnityEngine.UI;
 
 public class AudioController : MonoBehaviour
 {
-    public Slider volumeSlider;
+    public Slider bgmSlider;
+    public Slider clickSlider;
     void Start()
     {
-        float volume = AudioManager.instance.audioSource.volume;
-        volumeSlider.value = volume;
+        float bgmVolume = AudioManager.instance.audioSource.volume;
+        bgmSlider.value = bgmVolume;
+
+        float clickVolume = AudioManager.instance.ClickSource.volume;
+        clickSlider.value = clickVolume;
+
     }
 
     void Update()
     {
-        AudioManager.instance.audioSource.volume = volumeSlider.value;
+        AudioManager.instance.audioSource.volume = bgmSlider.value;
+        AudioManager.instance.ClickSource.volume = clickSlider.value;
     }
 }
