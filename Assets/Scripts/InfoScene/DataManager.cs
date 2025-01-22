@@ -11,9 +11,9 @@ public class DataManager : MonoBehaviour
 
     public List<MyProfile> data = new List<MyProfile>();
 
-    MyProfile value = null; // ÇöÀç ¼±ÅÃµÈ ÇÁ·ÎÇÊ Á¤º¸
+    MyProfile value = null; // í˜„ì¬ ì„ íƒëœ í”„ë¡œí•„ ì •ë³´
 
-    // -------- ÇÁ·ÎÇÊ ÇÁ·ÎÆÛÆ¼ ----------
+    // -------- í”„ë¡œí•„ í”„ë¡œí¼í‹° ----------
 
     public Sprite pfImage { get; set; }
     public string pfName { get; set; }

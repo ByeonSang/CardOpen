@@ -67,6 +67,13 @@ public class GameManager : MonoBehaviour
             failTxt.SetActive(true);
             Time.timeScale = 0.0f;
         }
+        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene("InfoScene");
+            NameLevel.maxLevel++;
+        }
+      
     }
 
     public void Matched()
@@ -77,7 +84,7 @@ public class GameManager : MonoBehaviour
             firstCard.DestroyCard();
             secondCard.DestroyCard();
             cardCount -= 2;
-            if (cardCount == 0) // ½ºÅ×ÀÌÁö ¼º°ø ½Ã
+            if (cardCount == 0) // ìŠ¤í…Œì´ì§€ ì„±ê³µ ì‹œ
             {
                 endTxt.gameObject.SetActive(true);
                 Time.timeScale = 0.0f;
