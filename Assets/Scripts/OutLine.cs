@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 
-[RequireComponent(typeof(Outline))]
+
 public class OutLine : MonoBehaviour
 {
-    private Outline _outLine;
+    private SpriteRenderer _sp;
     
     float r, g, b, a;
     [Range(0, 10)]
@@ -16,7 +15,7 @@ public class OutLine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _outLine = gameObject.GetComponent<Outline>();
+        _sp = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -31,7 +30,7 @@ public class OutLine : MonoBehaviour
         if (g >= 1) g = 0;
         if (b >= 1) b = 0;
         if (a >= 1) a = 0;
-        
-        _outLine.effectColor = new Color(r, g, b, a);
+
+        _sp.color = new Color(r, g, b, a);
     }
 }
