@@ -89,11 +89,15 @@ public class GameManager : MonoBehaviour
                 endTxt.gameObject.SetActive(true);
                 Time.timeScale = 0.0f;
                 
-                if (!NameLevel.clears[NameLevel.selectedLevel])
+                if (NameLevel.maxLevel < NameLevel.clears.Count)
                 {
-                    NameLevel.clears[NameLevel.selectedLevel] = true;
-                    if (NameLevel.maxLevel < NameLevel.clears.Count) NameLevel.maxLevel++;
+                    if (!NameLevel.clears[NameLevel.selectedLevel])
+                    {
+                        NameLevel.clears[NameLevel.selectedLevel] = true;
+                        NameLevel.maxLevel++;
+                    }
                 }
+                
             }
         }
         else
