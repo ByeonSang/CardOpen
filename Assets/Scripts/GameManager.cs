@@ -20,10 +20,6 @@ public class GameManager : MonoBehaviour
     public GameObject endTxt;
     public GameObject failTxt;
 
-    [Header("Audio")]
-    AudioSource audioSource;
-    public AudioClip clip;
-
     [Header("Counter")]
     public int cardCount = 0;
     public int failcount = 10;
@@ -46,7 +42,6 @@ public class GameManager : MonoBehaviour
     {
         level = NameLevel.selectedLevel;
         Time.timeScale = 1.0f;
-        audioSource = GetComponent<AudioSource>();
         stagelevel();
         Debug.Log(NameLevel.selectedLevel);
     }
@@ -80,7 +75,7 @@ public class GameManager : MonoBehaviour
     {
         if (firstCard.idx == secondCard.idx)
         {
-            audioSource.PlayOneShot(clip);
+            AudioManager.instance.clickSource.PlayOneShot(AudioManager.instance.matchClip);
             firstCard.DestroyCard();
             secondCard.DestroyCard();
             cardCount -= 2;

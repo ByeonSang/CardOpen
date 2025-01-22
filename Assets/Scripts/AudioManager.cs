@@ -6,10 +6,14 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-    
-    public AudioSource audioSource { get;set; }
+
+    public AudioSource audioSource;
+    public AudioSource clickSource;
+
     public AudioClip clip;
     public AudioClip btnClickClip;
+    public AudioClip matchClip;
+    public AudioClip flipClip;
 
     private void Awake()
     {
@@ -17,7 +21,8 @@ public class AudioManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            audioSource = GetComponent<AudioSource>();
+            audioSource = gameObject.AddComponent<AudioSource>();
+            clickSource = gameObject.AddComponent<AudioSource>();
         }
         else
         {
