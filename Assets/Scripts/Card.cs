@@ -10,6 +10,7 @@ public class Card : MonoBehaviour
     public GameObject back;
 
     public Animator anim;
+<<<<<<< Updated upstream
 
     //private AudioSource audioSource;
     //public AudioClip Clip;
@@ -26,6 +27,10 @@ public class Card : MonoBehaviour
     {
         
     }
+=======
+    
+    public SpriteRenderer frontImage;
+>>>>>>> Stashed changes
 
     public void Setting(int number)
     {
@@ -36,8 +41,12 @@ public class Card : MonoBehaviour
 
     public void OpenCard()
     {
+<<<<<<< Updated upstream
         //audioSource.PlayOneShot(Clip);
         AudioManager.instance.ClickSource.PlayOneShot(AudioManager.instance.btnClickClip);
+=======
+        AudioManager.instance.clickSource.PlayOneShot(AudioManager.instance.btnClickClip);
+>>>>>>> Stashed changes
 
         anim.SetBool("isOpen", true);
         front.SetActive(true);

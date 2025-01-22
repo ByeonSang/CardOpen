@@ -8,7 +8,11 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     public AudioSource audioSource;
+<<<<<<< Updated upstream
     public AudioSource ClickSource;
+=======
+    public AudioSource clickSource;
+>>>>>>> Stashed changes
     public AudioClip clip;
     public AudioClip btnClickClip;
 
@@ -18,8 +22,13 @@ public class AudioManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+<<<<<<< Updated upstream
             audioSource = gameObject.AddComponent<AudioSource>(); //bgm audioSource
             ClickSource = gameObject.AddComponent<AudioSource>(); //click audioSource
+=======
+            audioSource = gameObject.AddComponent<AudioSource>();
+            clickSource = gameObject.AddComponent<AudioSource>();
+>>>>>>> Stashed changes
         }
         else
         {

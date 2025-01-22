@@ -17,6 +17,7 @@ public class Satge1 : MonoBehaviour
     public void Stage1()
     {
         NameLevel.selectedLevel = stage;
+        AudioManager.instance.clickSource.PlayOneShot(AudioManager.instance.btnClickClip);
         SceneManager.LoadScene("MainScene");
             
     }

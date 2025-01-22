@@ -197,7 +197,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
+<<<<<<< Updated upstream
   ClickSource: {fileID: 0}
+=======
+  clickSource: {fileID: 0}
+>>>>>>> Stashed changes
   clip: {fileID: 8300000, guid: 383e07c4d2ca8a14a9857d24e3222258, type: 3}
   btnClickClip: {fileID: 8300000, guid: 9028c65c17cf0764b8125400e43da66f, type: 3}
 --- !u!4 &200991100
