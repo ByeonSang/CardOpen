@@ -130,6 +130,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: physica_expansion_0
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684aaf94c32e6534887c5fcc2d5439ee
+      internalID: 2065502429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -143,6 +164,7 @@ TextureImporter:
     nameFileIdTable:
       physica_expansion_0: 2065502429
       physica_expansion_1: -1448332510
+      physica_expansion_2: -1090517459
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
