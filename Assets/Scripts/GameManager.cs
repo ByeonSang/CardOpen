@@ -97,6 +97,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.clickSource.PlayOneShot(AudioManager.instance.failedClip);
             firstCard.CloseCard();
             secondCard.CloseCard();
             failcount -= 1;
