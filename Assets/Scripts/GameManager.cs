@@ -83,7 +83,8 @@ public class GameManager : MonoBehaviour
             {
                 endTxt.gameObject.SetActive(true);
                 Time.timeScale = 0.0f;
-                
+                AudioManager.instance.audioSource.PlayOneShot(AudioManager.instance.ClearMain);
+
                 if (NameLevel.maxLevel < NameLevel.clears.Count)
                 {
                     if (!NameLevel.clears[NameLevel.selectedLevel])
