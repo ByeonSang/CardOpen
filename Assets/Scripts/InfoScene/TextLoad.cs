@@ -15,10 +15,10 @@ public class TextLoad : MonoBehaviour
     public StringType type;
     void Start()
     {
-        DataManager s = DataManager.instance;
-        s.LoadData(NameLevel.selectedLevel - 1); //GameManager.instance.GetLevel();
         try
         {
+            DataManager s = DataManager.instance;
+            s.LoadData(NameLevel.selectedLevel - 1); //GameManager.instance.GetLevel();
             Text goText = GetComponent<Text>();
             string str = "";
             switch (type)

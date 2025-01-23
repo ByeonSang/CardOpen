@@ -7,10 +7,9 @@ public class ImageLoad : MonoBehaviour
 {
     void Start()
     {
-
-        DataManager.instance.LoadData(NameLevel.selectedLevel - 1);
 		try
 		{
+            DataManager.instance.LoadData(NameLevel.selectedLevel - 1);
             Image image = GetComponent<Image>();
 			image.sprite = DataManager.instance.pfImage;
 		}
