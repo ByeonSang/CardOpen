@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip flipClip;
     public AudioClip failedClip;
     public AudioClip ClearMain;
+    public AudioClip LoseClip;
 
     private void Awake()
     {
