@@ -17,7 +17,7 @@ public class TextLoad : MonoBehaviour
     {
         try
         {
-            MyProfile data = DataManager.instance.LoadData(NameLevel.selectedLevel - 1); // 외부 값 연결 NameLevel.selectedLevel;
+            MyProfile data = DataManager.instance.LoadData();
             Text goText = GetComponent<Text>();
             string str = "";
             switch (type)

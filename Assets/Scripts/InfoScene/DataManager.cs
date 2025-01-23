@@ -22,15 +22,13 @@ public class DataManager : MonoBehaviour
         }
     }
 
-    public MyProfile LoadData(int idx)
+    public MyProfile LoadData()
     {
-        try { return data[idx]; }
+        try { return data[NameLevel.selectedLevel - 1]; } // 외부 값 연결 NameLevel.selectedLevel;
         catch (Exception e)
         {
             Debug.Log($"Data Load Failed\n{e}");
             return null;
         }
     }
-
-
 }

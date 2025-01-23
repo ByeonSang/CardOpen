@@ -9,7 +9,7 @@ public class ImageLoad : MonoBehaviour
     {
 		try
 		{
-            MyProfile data = DataManager.instance.LoadData(NameLevel.selectedLevel - 1);
+            MyProfile data = DataManager.instance.LoadData();
             Image image = GetComponent<Image>();
 			image.sprite = data.image;
 		}
