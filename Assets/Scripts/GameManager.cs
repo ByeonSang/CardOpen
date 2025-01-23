@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
     {
         if (firstCard.idx == secondCard.idx)
         {
-            AudioManager.instance.clickSource.PlayOneShot(AudioManager.instance.matchClip);
+            AudioManager.instance.effectSource.PlayOneShot(AudioManager.instance.matchClip);
             firstCard.DestroyCard();
             secondCard.DestroyCard();
             cardCount -= 2;
@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
             {
                 endTxt.gameObject.SetActive(true);
                 Time.timeScale = 0.0f;
-                AudioManager.instance.audioSource.PlayOneShot(AudioManager.instance.ClearMain);
+                AudioManager.instance.effectSource.PlayOneShot(AudioManager.instance.ClearMain);
 
                 if (NameLevel.maxLevel < NameLevel.clears.Count)
                 {
@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            AudioManager.instance.clickSource.PlayOneShot(AudioManager.instance.failedClip);
+            AudioManager.instance.effectSource.PlayOneShot(AudioManager.instance.failedClip);
             firstCard.CloseCard();
             secondCard.CloseCard();
             failcount -= 1;

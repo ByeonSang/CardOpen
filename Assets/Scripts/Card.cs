@@ -22,7 +22,7 @@ public class Card : MonoBehaviour
 
     public void OpenCard()
     {
-        AudioManager.instance.clickSource.PlayOneShot(AudioManager.instance.flipClip);
+        AudioManager.instance.effectSource.PlayOneShot(AudioManager.instance.flipClip);
         
         anim.SetBool("isOpen", true);
         front.SetActive(true);

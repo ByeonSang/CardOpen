@@ -7,6 +7,6 @@ public class LoseOnEnable : MonoBehaviour
 {
     private void OnEnable()
     {
-        AudioManager.instance.clickSource.PlayOneShot(AudioManager.instance.LoseClip);
+        AudioManager.instance.effectSource.PlayOneShot(AudioManager.instance.LoseClip);
     }
 }

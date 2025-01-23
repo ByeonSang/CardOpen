@@ -7,8 +7,8 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
 
-    public AudioSource audioSource;
-    public AudioSource clickSource;
+    public AudioSource bgmSource;
+    public AudioSource effectSource;
 
     public AudioClip clip;
     public AudioClip btnClickClip;
@@ -24,8 +24,8 @@ public class AudioManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            audioSource = gameObject.AddComponent<AudioSource>();
-            clickSource = gameObject.AddComponent<AudioSource>();
+            bgmSource = gameObject.AddComponent<AudioSource>();
+            effectSource = gameObject.AddComponent<AudioSource>();
         }
         else
         {
@@ -36,11 +36,11 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource.volume = 0.1f;
-        clickSource.volume = 0.1f;
+        bgmSource.volume = 0.1f;
+        effectSource.volume = 0.1f;
 
-        audioSource.clip = this.clip;
-        audioSource.loop = true;
-        audioSource.Play();
+        bgmSource.clip = this.clip;
+        bgmSource.loop = true;
+        bgmSource.Play();
     }
 }
