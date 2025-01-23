@@ -68,6 +68,12 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("InfoScene");
             NameLevel.maxLevel++;
         }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            SceneManager.LoadScene("StageScene");
+            NameLevel.maxLevel++;
+        }
       
     }
 
