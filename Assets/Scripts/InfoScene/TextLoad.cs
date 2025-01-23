@@ -17,22 +17,19 @@ public class TextLoad : MonoBehaviour
     {
         try
         {
-            DataManager s = DataManager.instance;
-            s.LoadData(NameLevel.selectedLevel - 1); //GameManager.instance.GetLevel();
+            MyProfile data = DataManager.instance.LoadData(NameLevel.selectedLevel - 1); // 외부 값 연결 NameLevel.selectedLevel;
             Text goText = GetComponent<Text>();
             string str = "";
             switch (type)
             {
                 case StringType.ProfileString:
-                    
-                    str = $"이름: {s.pfName}\n나이: {s.pfAge}\n취미: {s.pfLike}\nMBTI: {s.pfMbti}\n좋아하는 게임\n>{s.pfGame}";
+                    str = $"이름: {data.name}\n나이: {data.age}\n취미: {data.like}\nMBTI: {data.mbti}\n좋아하는 게임\n>{data.game}";
                     break;
                 case StringType.introString:
-                    str = s.pfIntroduction;
+                    str = data.introduction;
                     break;
             }
             goText.text = str;
-
         }
         catch (System.Exception e)
         {

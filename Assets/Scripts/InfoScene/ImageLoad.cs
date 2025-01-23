@@ -9,14 +9,13 @@ public class ImageLoad : MonoBehaviour
     {
 		try
 		{
-            DataManager.instance.LoadData(NameLevel.selectedLevel - 1);
+            MyProfile data = DataManager.instance.LoadData(NameLevel.selectedLevel - 1);
             Image image = GetComponent<Image>();
-			image.sprite = DataManager.instance.pfImage;
+			image.sprite = data.image;
 		}
 		catch (System.Exception e)
 		{
 			Debug.Log($"Profile Image load Failed\n{e}");
-			Debug.Log(DataManager.instance.pfImage.name);
 		}
     }
 }
