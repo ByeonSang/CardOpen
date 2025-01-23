@@ -304,7 +304,7 @@ MonoBehaviour:
   matchClip: {fileID: 8300000, guid: e1f504d1bfc6f0c4e946148b5b53f564, type: 3}
   flipClip: {fileID: 8300000, guid: f0de7741cbfbfab40b8cac6ca5bc8cbb, type: 3}
   failedClip: {fileID: 8300000, guid: b5234cb9f6610e64184bfdd3f26536c8, type: 3}
-  ClearMain: {fileID: 0}
+  ClearMain: {fileID: 8300000, guid: 002cb664f069e4c44b9c4aa7d188450a, type: 3}
   LoseClip: {fileID: 8300000, guid: 67dde390c2330f24a9ce7dce8aa5e796, type: 3}
 --- !u!4 &200991100
 Transform:
