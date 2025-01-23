@@ -36,8 +36,8 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bgmSource.volume = 0.1f;
-        effectSource.volume = 0.1f;
+        bgmSource.volume = 0.03f;
+        effectSource.volume = 0.03f;
 
         bgmSource.clip = this.clip;
         bgmSource.loop = true;
